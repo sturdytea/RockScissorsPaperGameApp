@@ -14,7 +14,6 @@ import UIKit
 class HomeViewController: UIViewController {
 
     private lazy var homeView = HomeView()
-    private lazy let coordinator = AppCoordinator()
     
     override func loadView() {
         view = homeView
@@ -27,7 +26,7 @@ class HomeViewController: UIViewController {
     
     @objc
     private func startGameButtonTapped() {
-        c
+        
     }
 
 }
