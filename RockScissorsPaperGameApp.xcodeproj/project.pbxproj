@@ -17,6 +17,10 @@
 		B85FC2F32BC541B000B02307 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC2F22BC541B000B02307 /* PrimaryButton.swift */; };
 		B85FC2F62BC543CE00B02307 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC2F52BC543CE00B02307 /* UIFont.swift */; };
 		B85FC2F82BC552E800B02307 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC2F72BC552E800B02307 /* SecondaryButton.swift */; };
+		B85FC3052BCE712800B02307 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC3042BCE712800B02307 /* GameViewController.swift */; };
+		B85FC3072BCE713300B02307 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC3062BCE713300B02307 /* RulesViewController.swift */; };
+		B85FC3092BCE715D00B02307 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC3082BCE715D00B02307 /* GameView.swift */; };
+		B85FC30B2BCE716A00B02307 /* RulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85FC30A2BCE716A00B02307 /* RulesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		B85FC2F22BC541B000B02307 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B85FC2F52BC543CE00B02307 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		B85FC2F72BC552E800B02307 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		B85FC3042BCE712800B02307 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B85FC3062BCE713300B02307 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		B85FC3082BCE715D00B02307 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		B85FC30A2BCE716A00B02307 /* RulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +74,11 @@
 			children = (
 				B85FC2EF2BC5414B00B02307 /* Common */,
 				B85FC2E92BC5316000B02307 /* HomeScreen */,
+				B85FC3022BCE70D800B02307 /* GameScreen */,
+				B85FC3032BCE70E400B02307 /* RulesScreen */,
 				B85FC2D12BC5307C00B02307 /* AppDelegate.swift */,
-				B85FC2DA2BC5307E00B02307 /* Assets.xcassets */,
 				B85FC2EA2BC536B000B02307 /* AppCoordinator.swift */,
+				B85FC2DA2BC5307E00B02307 /* Assets.xcassets */,
 				B85FC2DF2BC5307E00B02307 /* Info.plist */,
 				B85FC2EC2BC5393700B02307 /* Storyboard.storyboard */,
 			);
@@ -109,6 +119,24 @@
 				B85FC2F52BC543CE00B02307 /* UIFont.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B85FC3022BCE70D800B02307 /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B85FC3042BCE712800B02307 /* GameViewController.swift */,
+				B85FC3082BCE715D00B02307 /* GameView.swift */,
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		B85FC3032BCE70E400B02307 /* RulesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B85FC3062BCE713300B02307 /* RulesViewController.swift */,
+				B85FC30A2BCE716A00B02307 /* RulesView.swift */,
+			);
+			path = RulesScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,10 +209,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85FC30B2BCE716A00B02307 /* RulesView.swift in Sources */,
+				B85FC3072BCE713300B02307 /* RulesViewController.swift in Sources */,
 				B85FC2F32BC541B000B02307 /* PrimaryButton.swift in Sources */,
 				B85FC2EB2BC536B000B02307 /* AppCoordinator.swift in Sources */,
 				B85FC2D22BC5307C00B02307 /* AppDelegate.swift in Sources */,
+				B85FC3092BCE715D00B02307 /* GameView.swift in Sources */,
 				B85FC2E82BC5315700B02307 /* HomeView.swift in Sources */,
+				B85FC3052BCE712800B02307 /* GameViewController.swift in Sources */,
 				B85FC2F82BC552E800B02307 /* SecondaryButton.swift in Sources */,
 				B85FC2F62BC543CE00B02307 /* UIFont.swift in Sources */,
 				B85FC2E62BC5311800B02307 /* HomeViewController.swift in Sources */,

@@ -7,21 +7,38 @@
 //
 // GitHub: https://github.com/sturdytea
 //
-    
 
 import UIKit
 
-class AppCoordinator {
-    let window: UIWindow
-    let homeViewController = HomeViewController()
+protocol Coordinator: AnyObject {
+    func showHomeScreen()
+    func showGameScreen()
+    func showRulesScreen()
+}
+
+class AppCoordinator: Coordinator {
     
-    init(window: UIWindow) {
-        self.window = window
+    weak var navigationController: UINavigationController?
+    
+    init(navigationController: UINavigationController? = nil) {
+        self.navigationController = navigationController
     }
     
-    func start() {
-        let navigationController = UINavigationController(rootViewController: homeViewController)
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+    func showHomeScreen() {
+        let homeViewController = HomeViewController()
+        homeViewController.coordinator = self
+        navigationController?.pushViewController(homeViewController, animated: true)
+    }
+    
+    func showGameScreen() {
+        let gameViewController = GameViewController()
+        gameViewController.coordinator = self
+        navigationController?.pushViewController(gameViewController, animated: true)
+    }
+    
+    func showRulesScreen() {
+        let rulesViewController = RulesViewController()
+        rulesViewController.coordinator = self
+        navigationController?.pushViewController(rulesViewController, animated: true)
     }
 }

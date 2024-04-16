@@ -14,13 +14,18 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var widnow: UIWindow?
-    var coordinator: AppCoordinator?
+    var window: UIWindow?
+    var appCoordinator: AppCoordinator?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        widnow = UIWindow(frame: UIScreen.main.bounds)
-        coordinator = AppCoordinator(window: widnow!)
-        coordinator?.start()
+        window = UIWindow()
+        window?.rootViewController = UINavigationController()
+        
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            appCoordinator = AppCoordinator(navigationController: navigationController)
+            appCoordinator?.showHomeScreen() // Start with the login screen
+        }
+        window?.makeKeyAndVisible()
         return true
     }
 }
